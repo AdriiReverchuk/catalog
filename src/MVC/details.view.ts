@@ -5,7 +5,7 @@ export class DetailsView {
             
             for(const i in v) {
                if(id === v[i].title) {
-                   const title = this.createElement("div")
+                   const title = this.createElement("div", "")
                }
             }
         }
