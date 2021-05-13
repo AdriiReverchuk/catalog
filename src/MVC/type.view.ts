@@ -10,7 +10,6 @@ export class TypeView {
             type.dataset.id = types[i].id
             this.container.append(type)
         }
-    
     }
     bindShowItems(showItems:(id:string)=> void):void {
         this.container.addEventListener("click", (event) => {
