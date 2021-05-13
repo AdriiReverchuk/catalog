@@ -1,20 +1,22 @@
+import {filesCatalog} from "./model"
 export class TypeView {
-    private container: HTMLElement
-    constructor() {
-        this.container = this.createElement("div", "item-container")
-        document.body.append(this.container)
-    }
-    renderTypes(types) {
-        for(let i=0; i<types.length; i++) {
-            const type = this.createElement('div', "type", types[i].title)
-            type.dataset.id = types[i].id
-            this.container.append(type)
+
+    renderTypes(types:filesCatalog):void {
+        const typeContainer = document.getElementById("type-container")
+
+        for(const [k,v] of Object.entries(types)) {
+            const type = this.createElement("div", "type", k)
+            typeContainer.append(type)
+            type.dataset.name = k
         }
     }
     bindShowItems(showItems:(id:string)=> void):void {
-        this.container.addEventListener("click", (event) => {
+        
+        const typeContainer = document.getElementById("type-container")
+        typeContainer.addEventListener("click", (event) => {
             if((event.target as HTMLElement).classList.contains("type")) {
-                showItems((event.target as HTMLElement).dataset.id)
+                showItems((event.target as HTMLElement).dataset.name)
+  
             }
         })
     }

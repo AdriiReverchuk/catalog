@@ -11,5 +11,12 @@ export class Controller {
         this.model = model
         this.itemView = itemView
         this.typeView = typeView
+
+        this.typeView.renderTypes(this.model.getData())
+        this.typeView.bindShowItems(this.handlShowItems)
+    }
+    handlShowItems = (id) => {
+ 
+        this.itemView.renderItems(id,this.model.getData())
     }
 }

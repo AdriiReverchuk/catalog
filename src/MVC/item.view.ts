@@ -1,15 +1,24 @@
+import {filesCatalog} from "./model"
 export class ItemView {
     private container: HTMLElement
     constructor() {
         this.container = this.createElement("div", "item-container")
         document.body.append(this.container)
     }
-    renderItems(items):void {
-        for(let i = 0; i < items.length; i++ ) {
-            const item = this.createElement("div", "item", items[i].title)
-            item.dataset.id = items[i].id
-            this.container.append(item)
+    renderItems(id:string,items: filesCatalog):void {
+        // const [k,v]
+        // Object.entries(items)
+        const itemContainer = document.getElementById("item-container")
+
+        for(const [k,v] of Object.entries(items)) {
+            if(k === id) {
+                for(const i in v) {
+                    const item = this.createElement("div", "item", v[i].title)
+                    itemContainer.append(item)
+                }
+            }
         }
+        
     }
     bindShowDetails(showDetails:(id:string)=> void):void {
         this.container.addEventListener("click", (event) => {

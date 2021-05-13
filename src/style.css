@@ -47,8 +47,8 @@
     box-shadow: -1px -6px 7px -1px rgba(34, 60, 80, 0.08) inset;
   }
   
-  #type,
-  #items,
+  .type,
+  .item,
   #description {
     display: flex;
     left: 20px;
@@ -58,6 +58,8 @@
     padding: 20px;
     box-shadow: -2px 4px 9px 0px rgba(34, 60, 80, 0.17);
     box-shadow: 1px -3px 31px 6px rgba(34, 60, 80, 0.08) inset;
-    gap: 10px;
   }
-  
+  .type, .item {
+      text-transform: capitalize;
+      margin-bottom: 20px;
+  }
