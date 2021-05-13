@@ -38,44 +38,44 @@ export class Model {
 		books: [
 			{
 				id: "book1",
-				title: "Фантастика",
+				title: "1984",
 				arrTags: ["#Книги", "#Фантастика"],
 			},
 			{
 				id: "book2",
-				title: "Комедия",
+				title: "Мертвые души",
 				arrTags: ["#Книги", "#Комедия"],
 			},
 			{
 				id: "book3",
-				title: "Триллер",
+				title: "Хоббит",
 				arrTags: ["#Книги", "#Триллер"],
 			},
 			{
 				id: "book4",
-				title: "Боевик",
+				title: "Гарри Поттер",
 				arrTags: ["#Книги", "#Боевик"],
 			},
 		],
 		podcast: [
 			{
 				id: "podcast1",
-				title: "Фантастика",
+				title: "Музыкальный",
 				arrTags: ["#Подкаст", "#Фантастика"],
 			},
 			{
 				id: "podcast2",
-				title: "Комедия",
+				title: "Бизнес",
 				arrTags: ["#Подкаст", "#Комедия"],
 			},
 			{
 				id: "podcast3",
-				title: "Триллер",
+				title: "Психологические",
 				arrTags: ["#Подкаст", "#Триллер"],
 			},
 			{
 				id: "podcast4",
-				title: "Боевик",
+				title: "Семейные",
 				arrTags: ["#Подкаст", "#Боевик"],
 			},
 		],
@@ -108,4 +108,5 @@ export class Model {
 	getData(): filesCatalog {
 		return this.catalogData;
 	}
+
 }

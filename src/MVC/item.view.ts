@@ -6,14 +6,12 @@ export class ItemView {
         document.body.append(this.container)
     }
     renderItems(id:string,items: filesCatalog):void {
-        // const [k,v]
-        // Object.entries(items)
         const itemContainer = document.getElementById("item-container")
-
         for(const [k,v] of Object.entries(items)) {
             if(k === id) {
                 for(const i in v) {
                     const item = this.createElement("div", "item", v[i].title)
+                    item.dataset.name = v[i].title
                     itemContainer.append(item)
                 }
             }
@@ -21,9 +19,11 @@ export class ItemView {
         
     }
     bindShowDetails(showDetails:(id:string)=> void):void {
-        this.container.addEventListener("click", (event) => {
+        const itemContainer = document.getElementById("item-container")
+        itemContainer.addEventListener("click", (event) => {
             if((event.target as HTMLElement).classList.contains("item")) {
-                showDetails((event.target as HTMLElement).dataset.id)
+                showDetails((event.target as HTMLElement).dataset.name)
+                // console.log((event.target as HTMLElement).dataset.name)
             }
         })
     }
