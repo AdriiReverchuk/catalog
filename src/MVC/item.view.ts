@@ -9,6 +9,12 @@ export class ItemView {
         const itemContainer = document.getElementById("item-container")
         for(const [k,v] of Object.entries(items)) {
             if(k === id) {
+                const arrItem = document.querySelectorAll('.item');
+                if (arrItem){
+                    for(let i=0;i<arrItem.length;i++){
+                        arrItem[i].remove();
+                    }
+                }
                 for(const i in v) {
                     const item = this.createElement("div", "item", v[i].title)
                     item.dataset.name = v[i].title

@@ -5,6 +5,12 @@ export class DetailsView {
         for(const [k,v] of Object.entries(details)) {
             for(const i in v) {
                if(id === v[i].title) {
+                const arrItem = document.querySelectorAll('.description');
+                if (arrItem){
+                    for(let i=0;i<arrItem.length;i++){
+                        arrItem[i].remove();
+                    }
+                }
                    const title = this.createElement("div", "description")
                    title.textContent = `Name: ${id}, Tags: ${v[i].arrTags}`
                    descriptionContainer.append(title)
