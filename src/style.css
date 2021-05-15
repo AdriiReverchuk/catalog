@@ -63,3 +63,6 @@
       text-transform: capitalize;
       margin-bottom: 20px;
   }
+  .type:hover {
+    animation: bounce 1s;
+}
