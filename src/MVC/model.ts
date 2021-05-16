@@ -103,7 +103,6 @@ export class Model {
 		],
 	};
 	constructor() {
-		// console.log(this.catalogData);
 	}
 	getData(): filesCatalog {
 		return this.catalogData;

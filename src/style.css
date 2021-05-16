@@ -1,5 +1,4 @@
 
-
 #container {
     display: flex;
     flex-direction: row;
@@ -16,7 +15,7 @@
     justify-content: center;
     align-items: center;
     width: 23vw;
-    height: auto;
+    height: 40%;
     border: 2px solid white;
     border-radius: 15px;
   }
@@ -27,11 +26,25 @@
     flex-direction: column;
     align-items: center;
     width: 23vw;
-    height: auto;
+    height: 440px;
+    overflow: hidden;
+    overflow-y: auto;
     border: 2px solid white;
     border-radius: 15px;
   }
+  #item-container::-webkit-scrollbar {
+    width: 10px;
+  }
   
+  #item-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    border-radius: 10px;
+  }
+  
+  #item-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ced7da, #959699);
+  }
   #description-container {
     display: flex;
     position: relative;

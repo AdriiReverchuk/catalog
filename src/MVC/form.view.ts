@@ -8,10 +8,7 @@ export class FormView {
       const inpTitle = this.getElement('#title-form');
       const inpTags = this.getElement('#tags-form');
       const inpSelect = this.getElement('#select')
-      console.log((<HTMLInputElement>inpSelect).value);
-      
       if((<HTMLInputElement>inpId).value !='' && (<HTMLInputElement>inpTitle).value !=''&& (<HTMLInputElement>inpTags).value !=''){
-        console.log((<HTMLInputElement>inpId).value);
         if(this.getElement('#message')){
           this.getElement('#message').remove()
         }
@@ -44,6 +41,14 @@ export class FormView {
               arrTags: [`#${(<HTMLInputElement>inpTags).value}`],
             })
             break;
+        }
+        const arrItem = document.querySelectorAll('.item');
+        if(arrItem){
+                if (arrItem){
+                    for(let i=0;i<arrItem.length;i++){
+                        arrItem[i].remove();
+                    }
+                }
         }
       }
       else{

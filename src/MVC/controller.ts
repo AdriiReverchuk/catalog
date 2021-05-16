@@ -30,8 +30,5 @@ export class Controller {
     }
     handlAddItems =()=>{
         this.formView.addItems(this.model.getData())
-        if(document.getElementsByClassName('item')){
-            this.typeView.bindShowItems(this.handlShowItems)
-        }
     }
 }
