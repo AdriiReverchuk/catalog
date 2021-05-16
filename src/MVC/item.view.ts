@@ -5,10 +5,6 @@ export class ItemView {
         this.container = this.createElement("div", "item-container")
         document.body.append(this.container)
     }
-    addView(){
-        console.log('a');
-        
-    }
     renderItems(id:string,items: filesCatalog):void {
         const itemContainer = document.getElementById("item-container")
         for(const [k,v] of Object.entries(items)) {

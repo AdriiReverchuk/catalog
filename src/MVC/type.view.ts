@@ -16,7 +16,6 @@ export class TypeView {
         typeContainer.addEventListener("click", (event) => {
             if((event.target as HTMLElement).classList.contains("type")) {
                 showItems((event.target as HTMLElement).dataset.name)
-  
             }
         })
     }

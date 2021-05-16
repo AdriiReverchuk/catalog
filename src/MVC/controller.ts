@@ -19,8 +19,7 @@ export class Controller {
         this.formView = formView
         this.typeView.renderTypes(this.model.getData())
         this.typeView.bindShowItems(this.handlShowItems)
-        
-        this.formView.addItems()
+        this.handlAddItems()
     }
     handlShowItems = (id:string):void => {
         this.itemView.renderItems(id,this.model.getData())
@@ -28,5 +27,12 @@ export class Controller {
     }
     handlShowDetails = (id:string):void => {
         this.detailsView.renderDetals(id, this.model.getData())
+    }
+    handlAddItems =()=>{
+        this.formView.addItems(this.model.getData())
+        if(document.getElementsByClassName('item')){
+            setTimeout(this.handlShowItems,1000)
+        }
+        this.typeView.bindShowItems(this.handlShowItems)
     }
 }
