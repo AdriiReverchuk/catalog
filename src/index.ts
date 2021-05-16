@@ -8,3 +8,4 @@ import {FormView} from "./MVC/form.view"
 const catalog = new Controller(new Model(), new ItemView(), new TypeView(), new DetailsView(),new FormView())
 
 
+

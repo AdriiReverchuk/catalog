@@ -19,6 +19,7 @@ export class Controller {
         this.formView = formView
         this.typeView.renderTypes(this.model.getData())
         this.typeView.bindShowItems(this.handlShowItems)
+        
         this.formView.addItems()
     }
     handlShowItems = (id:string):void => {

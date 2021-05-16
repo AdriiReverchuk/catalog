@@ -1,4 +1,7 @@
 node_modules
 dist
+<<<<<<< HEAD
+=======
 .cache
+>>>>>>> 743d0ec7b438ac4f02f4bcea64379ad91e17d095
 .parcel-cache
