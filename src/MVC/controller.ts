@@ -31,8 +31,7 @@ export class Controller {
     handlAddItems =()=>{
         this.formView.addItems(this.model.getData())
         if(document.getElementsByClassName('item')){
-            setTimeout(this.handlShowItems,1000)
+            this.typeView.bindShowItems(this.handlShowItems)
         }
-        this.typeView.bindShowItems(this.handlShowItems)
     }
 }
